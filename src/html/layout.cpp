@@ -286,7 +286,7 @@ body {
 .doc-subtitle { text-align: center; font-size: 15px; margin-bottom: 4px; }
 .doc-place-date { display: flex; justify-content: space-between; margin: 14px 0 18px; font-size: 15px; }
 .doc-intro { text-align: justify; font-size: 14.5px; line-height: 1.45; margin-bottom: 14px; }
-.doc-section-title { font-weight: 700; font-size: 15px; margin: 18px 0 8px; }
+.doc-section-title { text-align: center; font-weight: 700; font-size: 15px; margin: 18px 0 8px; }
 .doc-p { text-align: justify; font-size: 14px; line-height: 1.5; margin: 0 0 8px; white-space: pre-line; }
 .doc-requisites { display: flex; gap: 24px; margin-top: 10px; }
 .doc-requisites .col { flex: 1; font-size: 13.5px; line-height: 1.5; white-space: pre-line; }
