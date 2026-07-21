@@ -15,6 +15,8 @@ const std::string_view kAppCss = R"css(
     --line: rgba(255,255,255,0.12);
 }
 * { box-sizing: border-box; }
+a { color: #8ecae6; }
+a:visited { color: #8ecae6; }
 html, body {
     width: 100%;
     margin: 0;

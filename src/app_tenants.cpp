@@ -82,9 +82,20 @@ void App::handle_tenants_delete(const httplib::Request &req, httplib::Response &
         return;
     }
     int64_t id = std::stoll(req.get_param_value("id"));
+
+    if (m_tenants.has_contracts(id)) {
+        ContractFilter filter;
+        filter.tenant_id = id;
+        size_t count = m_contracts.list(filter).size();
+        std::string msg = "Удаление отменено: у арендатора есть " + std::to_string(count) +
+                           " договор(ов) — сначала удалите их на странице «Договоры»";
+        res.set_redirect("/tenants?error=" + fmt_util::url_encode(msg));
+        return;
+    }
+
     bool ok = m_tenants.remove(id);
     if (!ok) {
-        res.set_redirect("/tenants?error=" + fmt_util::url_encode("У арендатора есть договоры — сначала удалите их"));
+        res.set_redirect("/tenants?error=" + fmt_util::url_encode("Не удалось удалить арендатора"));
         return;
     }
     res.set_redirect("/tenants");
