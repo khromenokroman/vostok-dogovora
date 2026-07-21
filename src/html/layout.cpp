@@ -282,25 +282,25 @@ body {
 }
 .print-page:last-of-type { page-break-after: auto; margin-bottom: 0; }
 
-.doc-title { text-align: center; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
-.doc-subtitle { text-align: center; font-size: 15px; margin-bottom: 4px; }
-.doc-place-date { display: flex; justify-content: space-between; margin: 14px 0 18px; font-size: 15px; }
-.doc-intro { text-align: justify; font-size: 14.5px; line-height: 1.45; margin-bottom: 14px; }
-.doc-section-title { text-align: center; font-weight: 700; font-size: 15px; margin: 18px 0 8px; }
-.doc-p { text-align: justify; font-size: 14px; line-height: 1.5; margin: 0 0 8px; white-space: pre-line; }
-.doc-requisites { display: flex; gap: 24px; margin-top: 10px; }
-.doc-requisites .col { flex: 1; font-size: 13.5px; line-height: 1.5; white-space: pre-line; }
-.doc-requisites .col b { display: block; margin-bottom: 6px; }
-.doc-signatures { display: flex; gap: 24px; margin-top: 32px; }
-.doc-signatures .col { flex: 1; text-align: center; font-size: 14px; }
-.doc-sign-line { margin-top: 46px; border-top: 1px solid #333; padding-top: 6px; }
+.doc-title { text-align: center; font-weight: 700; font-size: 13px; margin-bottom: 3px; }
+.doc-subtitle { text-align: center; font-size: 11px; margin-bottom: 3px; }
+.doc-place-date { display: flex; justify-content: space-between; margin: 8px 0 10px; font-size: 10.5px; }
+.doc-intro { text-align: justify; font-size: 10px; line-height: 1.25; margin-bottom: 7px; }
+.doc-section-title { text-align: center; font-weight: 700; font-size: 11px; margin: 9px 0 5px; }
+.doc-p { text-align: justify; font-size: 10px; line-height: 1.25; margin: 0 0 4px; white-space: pre-line; }
+.doc-requisites { display: flex; gap: 24px; margin-top: 8px; }
+.doc-requisites .col { flex: 1; font-size: 9.5px; line-height: 1.25; white-space: pre-line; }
+.doc-requisites .col b { display: block; margin-bottom: 4px; }
+.doc-signatures { display: flex; gap: 24px; margin-top: 16px; }
+.doc-signatures .col { flex: 1; text-align: center; font-size: 10px; }
+.doc-sign-line { margin-top: 24px; border-top: 1px solid #333; padding-top: 4px; }
 
 @media print {
     body { background: #fff; padding: 0; }
     .toolbar { display: none; }
-    .print-page { box-shadow: none; border-radius: 0; max-width: none; margin: 0; padding: 14mm 16mm; }
+    .print-page { box-shadow: none; border-radius: 0; max-width: none; margin: 0; padding: 8mm 12mm; }
 }
-@page { size: A4; margin: 10mm; }
+@page { size: A4; margin: 8mm; }
 )css";
 
 std::string nav_bar(std::string_view active_section) {
