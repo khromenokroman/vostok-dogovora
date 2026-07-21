@@ -66,6 +66,8 @@ void App::run() {
     m_server.listen(m_config.host, m_config.port);
 }
 
+void App::stop() { m_server.stop(); }
+
 void App::handle_dashboard(const httplib::Request &, httplib::Response &res) {
     int64_t tenants_count = static_cast<int64_t>(m_tenants.list().size());
     int64_t contracts_total = m_contracts.count_total();

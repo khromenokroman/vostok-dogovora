@@ -13,6 +13,7 @@ public:
     explicit App(Config config);
 
     void run();
+    void stop();
 
 private:
     void register_routes();
