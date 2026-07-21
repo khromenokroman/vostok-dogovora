@@ -112,11 +112,12 @@ h1 { margin: 0; font-size: 34px; }
     padding: 10px 12px;
     border-radius: 12px;
     border: 1px solid var(--line);
-    background: rgba(255,255,255,0.10);
+    background-color: rgba(255,255,255,0.10);
     color: #fff;
     font-family: Cambria, serif;
     font-size: 15px;
 }
+.filter-bar select { padding-right: 40px; }
 
 .table-wrap {
     width: 100%;
@@ -216,14 +217,25 @@ input, select, textarea {
     padding: 13px 14px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.14);
-    background: rgba(255,255,255,0.10);
+    background-color: rgba(255,255,255,0.10);
     color: #fff;
     outline: none;
     font-family: Cambria, serif;
     font-size: 16px;
 }
 textarea { resize: vertical; min-height: 70px; }
-select option { color: #1f2a44; }
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+}
+select option { background: #1f2a44; color: #f5f5f5; }
 .actions-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
 .hint { font-size: 13px; opacity: 0.75; margin-top: 4px; }
 .batch-preview { background: rgba(255,255,255,0.07); border-radius: 16px; padding: 16px; margin-top: 16px; }
